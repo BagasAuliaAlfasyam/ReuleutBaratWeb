@@ -80,7 +80,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="card">
                         <div class="card-body">
-                            <img src="{{ url('/storage/uploads') . '/' . $data->images }}" alt="{{ $data->images }}" class="img-thumbnail my-3">
+                            <img src="{{ url('/storage/uploads/images') . '/' . $data->images }}" alt="{{ $data->images }}" class="img-thumbnail my-3">
                         </div>
                     </div>
                 </div>

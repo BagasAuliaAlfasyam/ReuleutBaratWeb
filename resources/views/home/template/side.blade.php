@@ -14,8 +14,7 @@
         <li class="nav-heading">Berita</li>
         @if (Auth()->user()->role == true)
             <li class="nav-item">
-                <a href="{{ url('/blog/categories') }}"
-                    class="nav-link {{ $active == 'categories' ? '' : 'collapsed' }}">
+                <a href="{{ url('/blog/categories') }}" class="nav-link {{ $active == 'categories' ? '' : 'collapsed' }}">
                     <i class="bi bi-card-list"></i><span>Kategori</span>
                 </a>
             </li>
@@ -49,6 +48,16 @@
             </li>
         @endif
         <!-- End Gallery Page Nav -->
+        @if (Auth()->user()->role == true)
+            <li class="nav-heading">Akun</li>
+            <li class="nav-item">
+                <a class="nav-link {{ $active == 'galleries' ? '' : 'collapsed' }}" href="{{ url('/galleries') }}">
+                    <i class="bi bi-people"></i>
+                    <span>Akun</span>
+                </a>
+            </li>
+        @endif
+
     </ul>
 
 </aside><!-- End Sidebar-->

@@ -30,7 +30,7 @@ class ProfileController extends Controller
 
             return redirect('/profile')->with('success', 'Image has been updated successfully!');
         }catch (QueryException){
-            return redirect()->back()->with('error', 'paok');
+            return redirect()->back()->with('error', 'Server tidak merespon!');
         }
     }
 

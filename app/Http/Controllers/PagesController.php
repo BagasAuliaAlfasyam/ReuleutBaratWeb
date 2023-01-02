@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Aparatur;
 use App\Models\Tag;
 use App\Models\Post;
 use App\Models\Team;
@@ -26,18 +27,18 @@ class PagesController extends Controller
             $filter = Arr::add($filter, $key, $v);
         }
         $recent = Post::where('publish_status', true)->orderBy('created_at', 'desc')->paginate(3);
-        $keyword = 'PMII UNIRA, PMII PAMEKASAN, PMII KOMISARIAT UNIRA, PMII UNIRA PAMEKASAN, PMII UNIVERSITAS MADURA';
-        $desc = 'Sistem Informasi dan Sistem Blog, Artikel PMII Komisariat Unira Pamekasan';
+        $keyword = 'REULEUT BARAT';
+        $desc = 'Sistem Informasi Desa REULEUT BARAT';
         return view('index', compact('gallery', 'filter', 'recent', 'keyword', 'desc'));
     }
     public function team()
     {
-        $data = Team::orderBy('jabatan')
+        $data = Aparatur::orderBy('jabatan')
             ->where('periode', date('Y'))
             ->where('demisioner', date('Y') + 1)
             ->get();
-        $keyword = 'PMII UNIRA, PMII PAMEKASAN, PMII KOMISARIAT UNIRA, PMII UNIRA PAMEKASAN, PMII UNIVERSITAS MADURA';
-        $desc = 'Sistem Informasi dan Sistem Blog, Artikel PMII Komisariat Unira Pamekasan';
+        $keyword = 'REULEUT BARAT';
+        $desc = 'Sistem Informasi Desa REULEUT BARAT';
         return view('pages.team.index', compact('data', 'keyword', 'desc'));
     }
     public function blog()
@@ -64,8 +65,8 @@ class PagesController extends Controller
         foreach ($tags as $key => $value) {
             $keyword = Arr::add($keyword, $key, $value->name_tag);
         }
-        $keyword ?? 'PMII UNIRA, PMII PAMEKASAN, PMII KOMISARIAT UNIRA, PMII UNIRA PAMEKASAN, PMII UNIVERSITAS MADURA';
-        $desc = 'Sistem Informasi dan Sistem Blog, Artikel PMII Komisariat Unira Pamekasan';
+        $keyword ?? 'REULEUT BARAT';
+        $desc = 'Sistem Informasi Desa REULEUT BARAT ';
         $recent = Post::where('publish_status', true)->orderBy('created_at', 'desc')->paginate(5);
         return view('pages.blog.index', compact('blog', 'categories', 'tags', 'keyword', 'desc', 'recent'));
     }
@@ -79,8 +80,8 @@ class PagesController extends Controller
         foreach ($blog->post_tag as $key => $value) {
             $keyword = Arr::add($keyword, $key, $value->tag->name_tag);
         }
-        $keyword ?? 'PMII UNIRA, PMII PAMEKASAN, PMII KOMISARIAT UNIRA, PMII UNIRA PAMEKASAN, PMII UNIVERSITAS MADURA';
-        $desc = 'Sistem Informasi dan Sistem Blog, Artikel PMII Komisariat Unira Pamekasan';
+        $keyword ?? 'REULEUT BARAT';
+        $desc = 'Sistem Informasi Desa REULEUT BARAT';
         $recent = Post::where('publish_status', true)->orderBy('created_at', 'desc')->paginate(5);
         return view('pages.blog.index', compact('blog', 'categories', 'tags', 'keyword', 'desc', 'recent', 'page'));
     }
@@ -98,8 +99,8 @@ class PagesController extends Controller
         foreach ($tags as $key => $value) {
             $keyword = Arr::add($keyword, $key, $value->name_tag);
         }
-        $keyword ?? 'PMII UNIRA, PMII PAMEKASAN, PMII KOMISARIAT UNIRA, PMII UNIRA PAMEKASAN, PMII UNIVERSITAS MADURA';
-        $desc = 'Sistem Informasi dan Sistem Blog, Artikel PMII Komisariat Unira Pamekasan';
+        $keyword ?? 'REULEUT BARAT';
+        $desc = 'Sistem Informasi Desa REULEUT BARAT';
         $recent = Post::where('publish_status', true)->orderBy('created_at', 'desc')->paginate(5);
         return view('pages.blog.index', compact('blog', 'categories', 'tags', 'keyword', 'desc', 'recent', 'page'));
     }
