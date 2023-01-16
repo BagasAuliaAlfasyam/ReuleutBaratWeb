@@ -20,12 +20,15 @@ return new class extends Migration
                 'Sekretaris',
                 'Bendahara',
                 'Tuha Peut',
-                'Tuha Lapan',
-                'Kepala Bidang',
-                'Kepala Dusun Cot Teungoh',
-                'Kepala Dusun Paloh Bugak',
-                'Kepala Dusun Paloh Panyang',
-                'Kepala Dusun Paloh Sawang',
+                'Keurani Gampong',
+                'Kepala Seksi Pemerintahan dan Masyarakat',
+                'Kepala Seksi Pembangunan dan Pemberdayaan',
+                'Keurani Cut Urusan Umum dan Perencanaan',
+                'Keurani Cut Utusan Keuangan',
+                'Ulee Jurong Cot Teungoh',
+                'Ulee Jurong Paloh Bugak',
+                'Ulee Jurong Paloh Panyang',
+                'Ulee Jurong Paloh Sawang',
             ]);
             $table->string('fullname');
             $table->string('images');
