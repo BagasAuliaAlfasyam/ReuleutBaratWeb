@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('galleries', function (Blueprint $table) {
             $table->id();
-            $table->enum('filter_gallery', ['Pemerintah Desa', 'UMKM']);
+            $table->enum('filter_gallery', ['Pemerintah Desa', 'UMKM', 'Tamu', 'Acara', 'Kegiatan']);
             $table->text('description');
             $table->string('images');
             $table->timestamps();

@@ -21,13 +21,11 @@ return new class extends Migration
                 'Bendahara',
                 'Tuha Peut',
                 'Tuha Lapan',
-                'Waka III',
-                'Sekretaris Waka I',
-                'Sekretaris Waka II',
-                'Sekretaris Waka III',
-                'Co. Biro Kaderisasi',
-                'Co. Biro Advokasi',
-                'Co. Biro Keagamaan',
+                'Kepala Bidang',
+                'Kepala Dusun Cot Teungoh',
+                'Kepala Dusun Paloh Bugak',
+                'Kepala Dusun Paloh Panyang',
+                'Kepala Dusun Paloh Sawang',
             ]);
             $table->string('fullname');
             $table->string('images');

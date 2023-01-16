@@ -9,7 +9,7 @@
                     <li class="breadcrumb-item"><a href="{{ url('/dashboard') }}">Beranda</a></li>
                     <li class="breadcrumb-item">Struktur Dan Galeri</li>
                     <li class="breadcrumb-item"><a href="{{ url('/blog/teams') }}">Struktur Aparatur Desa</a></li>
-                    <li class="breadcrumb-item active"><a href="{{ url('/blog/team/create') }}">Buat</a></li>
+                    <li class="breadcrumb-item active"><a href="{{ url('/blog/team/create') }}">Ubah</a></li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -20,7 +20,7 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Buat Struktur</h5>
+                            <h5 class="card-title">Ubah Struktur</h5>
                             <a href="{{ url('/teams') }}" role="button" class="btn btn-secondary mb-2">
                                 <i class="bi bi-arrow-left-circle"></i> Kembali
                             </a>
