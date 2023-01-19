@@ -5,7 +5,7 @@
 
         <li class="nav-heading">Main</li>
         <li class="nav-item">
-            <a class="nav-link {{ $active == 'dashboard' ? '' : 'collapsed' }}" href="{{ url('/dashboard') }}">
+            <a class="nav-link {{ Request::is('dashboard') ? '' : 'collapsed' }}" href="{{ url('/dashboard') }}">
                 <i class="bi bi-grid"></i>
                 <span>Dasbor</span>
             </a>
@@ -14,18 +14,18 @@
         <li class="nav-heading">Berita</li>
         @if (Auth()->user()->role == true)
             <li class="nav-item">
-                <a href="{{ url('/blog/categories') }}" class="nav-link {{ $active == 'categories' ? '' : 'collapsed' }}">
+                <a href="{{ url('/blog/categories') }}" class="nav-link {{ Request::is('blog/categories') ? '' : 'collapsed' }}">
                     <i class="bi bi-card-list"></i><span>Kategori</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ url('/blog/tags') }}" class="nav-link {{ $active == 'tags' ? '' : 'collapsed' }}">
+                <a href="{{ url('/blog/tags') }}" class="nav-link {{ Request::is('blog/tags') ? '' : 'collapsed' }}">
                     <i class="bi bi-tags"></i><span>Tag</span>
                 </a>
             </li>
         @endif
         <li class="nav-item">
-            <a href="{{ url('/blog/posts') }}" class="nav-link {{ $active == 'posts' ? '' : 'collapsed' }}">
+            <a href="{{ url('/blog/posts') }}" class="nav-link {{ Request::is('blog/posts') ? '' : 'collapsed' }}">
                 <i class="bi bi-file-earmark-text"></i><span>Postingan Berita</span>
             </a>
         </li><!-- End Blog Posts Nav -->
@@ -34,14 +34,14 @@
             <li class="nav-heading">Struktur & Galeri</li>
 
             <li class="nav-item">
-                <a class="nav-link {{ $active == 'teams' ? '' : 'collapsed' }}" href="{{ url('/teams') }}">
+                <a class="nav-link {{ Request::is('teams') ? '' : 'collapsed' }}" href="{{ url('/teams') }}">
                     <i class="bi bi-people"></i>
                     <span>Struktur Aparatur Desa</span>
                 </a>
             </li><!-- End team Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link {{ $active == 'galleries' ? '' : 'collapsed' }}" href="{{ url('/galleries') }}">
+                <a class="nav-link {{ Request::is('galleries') ? '' : 'collapsed' }}" href="{{ url('/galleries') }}">
                     <i class="bi bi-card-image"></i>
                     <span>Galeri</span>
                 </a>
@@ -51,7 +51,7 @@
         @if (Auth()->user()->role == true)
             <li class="nav-heading">Akun</li>
             <li class="nav-item">
-                <a class="nav-link {{ $active == 'galleries' ? '' : 'collapsed' }}" href="{{ url('/galleries') }}">
+                <a class="nav-link {{ Request::is('accounts') ? '' : 'collapsed' }}" href="{{ url('/accounts') }}">
                     <i class="bi bi-people"></i>
                     <span>Akun</span>
                 </a>
