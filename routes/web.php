@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use App\Models\Team;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -93,6 +94,15 @@ Route::middleware(['auth'])->group(function () {
             Route::post('/gallery', 'store');
             Route::get('/gallery/edit/{id}', 'edit');
             Route::get('/gallery/destroy/{id}', 'destroy');
+        });
+        // For Create Account
+        Route::controller(AccountController::class)->group(function () {
+            Route::get('/accounts', 'index');
+            Route::get('/account/create', 'create');
+            Route::post('/account', 'store');
+            Route::get('/account/{id}/edit','edit');
+            Route::patch('/account/{id}/update', 'update');
+            Route::get('/account/{id}/destroy', 'destroy');
         });
     });
     Route::controller(ProfileController::class)->group(function () {
