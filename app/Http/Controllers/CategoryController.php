@@ -13,13 +13,11 @@ class CategoryController extends Controller
     public function index()
     {
         $data = Category::with(["post"])->get();
-        $active = 'categories';
-        return view('home.blog.categories.index', compact('data', 'active'));
+        return view('home.blog.categories.index', compact('data'));
     }
     public function create()
     {
-        $active = 'categories';
-        return view('home.blog.categories.ceate', compact('active'));
+        return view('home.blog.categories.ceate');
     }
     public function store(Request $request)
     {
@@ -42,8 +40,7 @@ class CategoryController extends Controller
     {
         try {
             $data = Category::firstWhere('id', $id);
-            $active = 'categories';
-            return view('home.blog.categories.edit', compact('data', 'active'));
+            return view('home.blog.categories.edit', compact('data'));
         } catch (QueryException $th) {
             return redirect()->back()->with(['error' => 'Server tidak merespon!']);
         }
