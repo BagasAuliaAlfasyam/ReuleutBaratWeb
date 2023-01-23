@@ -26,10 +26,4 @@
 
     <!-- Template Main CSS File -->
     <link href="{{ url('/assets/css/style.css') }}" rel="stylesheet">
-    <!-- =======================================================
-  * Template Name: FlexStart - v1.10.1
-  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
