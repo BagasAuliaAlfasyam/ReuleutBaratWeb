@@ -7,17 +7,17 @@
         <nav>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
-            <li class="breadcrumb-item">User</li>
-            <li class="breadcrumb-item active">Profile</li>
+            <li class="breadcrumb-item"><a href="/accounts">User</a></li>
+            <li class="breadcrumb-item active">Lists</li>
           </ol>
         </nav>
       </section>
 
       <div class="card">
         <div class="card-header">
-          <h5 class="card-title">Postingan Berita</h5>
-          <a href="{{ url('/blog/post/create') }}" role="button" class="btn btn-primary">
-            <i class="bi bi-plus-circle"></i> Postingan
+          <h2 class="card-title">Tambah Akun</h2>
+          <a href="{{ url('/account/create') }}" role="button" class="btn btn-primary">
+            <i class="bi bi-plus-circle"></i> Akun
           </a>
         </div>
 
@@ -46,25 +46,20 @@
                     <td>{{ $user->phone}}</td>
                     <td>{{ $user->address}}</td>
                     <td>
-                      <div class="btn-group btn-group-sm" role="group"
+                      <div class="btn-group btn-group-sm gap-1" role="group"
                           aria-label="Basic example">
-                        <form action="{{-- url('/blog/post/show').'/'.$item->id --}}"
-                            method="GET">
-                            @csrf
-                            <button type="submit" class="btn btn-sm btn-success">
-                                <i class="bi bi-eye"></i>
-                            </button>
+                        <form action="{{ url('/account/'.$user->id.'/show') }}" method="GET">
+                          @csrf
+                          <button type="submit" class="btn btn-sm btn-success">
+                              <i class="bi bi-eye"></i>
+                          </button>
                         </form>
 
-                        <form action="{{-- url('/blog/post/edit').'/'.$item->id --}}"
-                            method="GET">
-                            @csrf
-                            <button type="submit" class="btn btn-sm btn-warning">
-                                <i class="bi bi-pencil"></i>
-                            </button>
-                        </form>
+                        <a href="/account/{{ $user->username }}/edit" class="btn btn-sm btn-warning" role="button">
+                          <i class="bi bi-pencil"></i>
+                        </a>
                         
-                        <form action="{{-- url('/blog/post/destroy').'/'.$item->id --}}"
+                        <form action="{{ url('/account/'.$user->id.'/destroy') }}"
                             method="POST">
                             @method('DELETE')
                             @csrf
