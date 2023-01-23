@@ -1,10 +1,3 @@
-/**
-* Template Name: FlexStart - v1.10.1
-* Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -114,11 +107,11 @@ section {
   text-decoration: underline;
 }
 
-.breadcrumbs ol li+li {
+.breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li+li::before {
+.breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: #8894f6;
@@ -246,7 +239,7 @@ section {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
+.navbar li:hover > a {
   color: #4154f1;
 }
 
@@ -298,11 +291,11 @@ section {
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover>a {
+.navbar .dropdown ul li:hover > a {
   color: #4154f1;
 }
 
-.navbar .dropdown:hover>ul {
+.navbar .dropdown:hover > ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
@@ -314,7 +307,7 @@ section {
   visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover>ul {
+.navbar .dropdown .dropdown:hover > ul {
   opacity: 1;
   top: 0;
   left: 100%;
@@ -326,7 +319,7 @@ section {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
@@ -397,7 +390,7 @@ section {
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover>a {
+.navbar-mobile li:hover > a {
   color: #4154f1;
 }
 
@@ -432,12 +425,55 @@ section {
 
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover>a {
+.navbar-mobile .dropdown ul li:hover > a {
   color: #4154f1;
 }
 
-.navbar-mobile .dropdown>.dropdown-active {
+.navbar-mobile .dropdown > .dropdown-active {
   display: block;
+}
+
+/*--------------------------------------------------------------
+# Mouse Scroll Animation
+--------------------------------------------------------------*/
+
+.container_mouse {
+  display: inline;
+}
+
+.mouse-btn {
+  width: 20px;
+  height: 40px;
+  border: 3px solid rgba(122, 122, 124, 0.918);
+  border-radius: 20px;
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.mouse-scroll {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(
+    170deg,
+    rgba(122, 122, 124, 0.918),
+    rgb(123, 124, 124)
+  );
+  border-radius: 50%;
+  margin: auto;
+  animation: scrolling13 1s linear infinite;
+}
+
+@keyframes scrolling13 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(20px);
+  }
 }
 
 /*--------------------------------------------------------------
@@ -465,13 +501,17 @@ section {
 
 .hero .btn-get-started {
   margin-top: 30px;
+  margin-inline-start: 1rem;
   line-height: 0;
-  padding: 15px 40px;
+  padding: 15px 20px;
   border-radius: 4px;
   transition: 0.5s;
+  color: #4154f1;
+}
+
+.hero .btn-get-started:hover {
   color: #fff;
-  background: #4154f1;
-  box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
+  background-color: #4154f1;
 }
 
 .hero .btn-get-started span {
@@ -542,8 +582,10 @@ section {
 # About
 --------------------------------------------------------------*/
 .about .content {
-  background-color: #f6f9ff;
+  border-start-start-radius: 1rem;
+  border-end-start-radius: 1rem;
   padding: 40px;
+  background-color: #f6f9ff;
 }
 
 .about h3 {
@@ -1129,6 +1171,8 @@ section {
 }
 
 .portfolio .portfolio-wrap img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
   transition: 1s;
 }
 
@@ -1260,7 +1304,10 @@ section {
   position: relative;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -1268,7 +1315,10 @@ section {
   border: 1px solid #4154f1;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet-active {
   background-color: #4154f1;
 }
 
@@ -1291,7 +1341,7 @@ section {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
 }
 
@@ -1434,7 +1484,7 @@ section {
 .team .member .social {
   position: absolute;
   right: -100%;
-  top: 30px;
+  top: 0;
   opacity: 0;
   border-radius: 4px;
   transition: 0.5s;
@@ -1546,6 +1596,8 @@ section {
 }
 
 .recent-blog-posts .post-box .post-img img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
   transition: 0.5s;
 }
 
@@ -1685,7 +1737,7 @@ section {
   padding: 12px 15px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   background: #4154f1;
   border: 0;
   padding: 10px 30px;
@@ -1694,7 +1746,7 @@ section {
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: #5969f3;
 }
 
@@ -1732,8 +1784,9 @@ section {
 }
 
 .blog .entry .entry-img {
-  max-height: 440px;
   margin: -30px -30px 20px -30px;
+  max-height: 440px;
+  text-align: center;
   overflow: hidden;
 }
 
@@ -1767,7 +1820,7 @@ section {
   margin: 0;
 }
 
-.blog .entry .entry-meta ul li+li {
+.blog .entry .entry-meta ul li + li {
   padding-left: 20px;
 }
 
@@ -1784,8 +1837,14 @@ section {
   line-height: 1;
 }
 
+.blog .entry .entry-content {
+  margin-bottom: 1em;
+  overflow-wrap: break-word;
+}
+
 .blog .entry .entry-content p {
   line-height: 24px;
+  overflow-wrap: break-word;
 }
 
 .blog .entry .entry-content .read-more {
@@ -1884,7 +1943,7 @@ section {
   display: inline-block;
 }
 
-.blog .entry .entry-footer .tags li+li::before {
+.blog .entry .entry-footer .tags li + li::before {
   padding-right: 6px;
   color: #6c757d;
   content: ",";
@@ -2103,7 +2162,7 @@ section {
   position: relative;
 }
 
-.blog .sidebar .search-form form input[type=text] {
+.blog .sidebar .search-form form input[type="text"] {
   border: 0;
   padding: 4px;
   border-radius: 4px;
@@ -2140,7 +2199,7 @@ section {
   padding: 0;
 }
 
-.blog .sidebar .categories ul li+li {
+.blog .sidebar .categories ul li + li {
   padding-top: 10px;
 }
 
@@ -2159,13 +2218,15 @@ section {
   font-size: 14px;
 }
 
-.blog .sidebar .recent-posts .post-item+.post-item {
+.blog .sidebar .recent-posts .post-item + .post-item {
   margin-top: 15px;
 }
 
 .blog .sidebar .recent-posts img {
   width: 80px;
   float: left;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 
 .blog .sidebar .recent-posts h4 {
@@ -2259,13 +2320,13 @@ section {
   border: 1px solid #e1ecff;
 }
 
-.footer .footer-newsletter form input[type=email] {
+.footer .footer-newsletter form input[type="email"] {
   border: 0;
   padding: 8px;
   width: calc(100% - 140px);
 }
 
-.footer .footer-newsletter form input[type=submit] {
+.footer .footer-newsletter form input[type="submit"] {
   position: absolute;
   top: 0;
   right: 0;
@@ -2281,7 +2342,7 @@ section {
   border-radius: 4px;
 }
 
-.footer .footer-newsletter form input[type=submit]:hover {
+.footer .footer-newsletter form input[type="submit"]:hover {
   background: #5969f3;
 }
 
