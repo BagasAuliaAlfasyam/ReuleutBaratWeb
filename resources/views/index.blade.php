@@ -8,19 +8,19 @@
             <div class="row gx-0">
 
                 <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-                    <div class="content">
+                    <div class="content shadow">
                         <h3>Tentang</h3>
                         <h2>Sejarah Desa Reuleut Barat.</h2>
                         <p>
-                            Desa Reuleut Barat awalnya adalah suatu program desa Binaan yang dicetuskan oleh pemerintah dan perusahaan yaitu PT. Pupuk Iskandar Muda dalam rangka pemekaran wilayah pada desa di kecamatan muara batu, Kabupaten Aceh Utara.
-Pada awal pendiriannya penduduk hanya terpusat pada Desa Reuleut berkisaran pada tahun 2010 an. Setelah beberapa waktu Desa Reuleut di bagi menjadi 2 yaitu reuleut barat dan reuleut timu.
+                            Desa Reuleut Barat awalnya adalah suatu program desa Binaan yang dicetuskan oleh pemerintah dan perusahaan yaitu PT. Pupuk Iskandar Muda dalam rangka pemekaran wilayah pada desa di Kecamatan Muara Batu, Kabupaten Aceh Utara.
+Pada awal pendiriannya penduduk hanya terpusat pada Desa Reuleut berkisaran pada tahun 2010 an. Setelah beberapa waktu Desa Reuleut di bagi menjadi 2 yaitu Reuleut Barat dan Reuleut Timu.
 
                         </p>
                     </div>
                 </div>
 
                 <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-                    <img src="assets/img/reuleutbaratt.jpg" class="img-fluid" alt="">
+                    <img src="assets/img/reuleutbaratt.webp" class="img-fluid img-thumbnail" alt="Meunasah Reuleut Barat">
                 </div>
 
             </div>
