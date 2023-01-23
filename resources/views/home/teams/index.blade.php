@@ -94,7 +94,7 @@
             bottom: 0;
             height: 100%;
             width: 100%;
-            background: url(../img/team-shape.svg) no-repeat center bottom;
+            background: url(/assets/img/team-shape.svg) no-repeat center bottom;
             background-size: contain;
             z-index: 1;
         }
@@ -102,7 +102,7 @@
         .team .member .social {
             position: absolute;
             right: -100%;
-            top: 30px;
+            top: 0;
             opacity: 0;
             border-radius: 4px;
             transition: 0.5s;
