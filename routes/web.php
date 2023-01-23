@@ -100,9 +100,12 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/accounts', 'index');
             Route::get('/account/create', 'create');
             Route::post('/account', 'store');
-            Route::get('/account/{id}/edit','edit');
+            Route::get('/account/{username}/show', 'show');
+            Route::get('/account/{username}/edit','edit');
             Route::patch('/account/{id}/update', 'update');
-            Route::get('/account/{id}/destroy', 'destroy');
+            Route::get('/account/{username}/change-password', 'changePassword');
+            Route::patch('/account/{id}/update-password', 'updatePassword');
+            Route::delete('/account/{id}/destroy', 'destroy');
         });
     });
     Route::controller(ProfileController::class)->group(function () {
