@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('phone');
             $table->text('address');
-            $table->string('user_images');
+            $table->string('user_images')->default('profile-img.jpg');
             $table->boolean('role');
             $table->rememberToken();
             $table->timestamps();
