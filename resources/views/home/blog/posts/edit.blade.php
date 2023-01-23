@@ -80,7 +80,7 @@
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-12">
                             <div class="card">
-                                <div class="card-body">
+                                <div class="card-body pt-3">
                                     <label for="validationCustom03" class="form-label">Kategori</label>
                                     <select class="form-select @error('category') is-invalid @enderror"
                                         aria-label="category blog" name="category" required>
