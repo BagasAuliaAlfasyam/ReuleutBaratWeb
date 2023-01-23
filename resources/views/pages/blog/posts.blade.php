@@ -1,7 +1,7 @@
 @foreach ($blog as $item)
     <article class="entry">
 
-        <div class="entry-img">
+        <div class="entry-img d-flex justify-content-center">
             <img src="{{ url('/storage/uploads/images') . '/' . $item->images }}" alt="{{ $item->images }}"
                 class="img-fluid">
         </div>
