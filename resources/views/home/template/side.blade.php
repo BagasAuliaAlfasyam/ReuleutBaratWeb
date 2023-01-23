@@ -9,9 +9,17 @@
                 <i class="bi bi-grid"></i>
                 <span>Dasbor</span>
             </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{ url('/') }}">
+                <i class="bi bi-grid"></i>
+                <span>Home</span>
+            </a>
         </li><!-- End Dashboard Nav -->
 
         <li class="nav-heading">Berita</li>
+
         @if (Auth()->user()->role == true)
             <li class="nav-item">
                 <a href="{{ url('/blog/categories') }}" class="nav-link {{ Request::is('blog/categories') ? '' : 'collapsed' }}">
@@ -24,6 +32,7 @@
                 </a>
             </li>
         @endif
+
         <li class="nav-item">
             <a href="{{ url('/blog/posts') }}" class="nav-link {{ Request::is('blog/posts') ? '' : 'collapsed' }}">
                 <i class="bi bi-file-earmark-text"></i><span>Postingan Berita</span>
@@ -51,7 +60,7 @@
         @if (Auth()->user()->role == true)
             <li class="nav-heading">Akun</li>
             <li class="nav-item">
-                <a class="nav-link {{ Request::is('accounts') ? '' : 'collapsed' }}" href="{{ url('/accounts') }}">
+                <a class="nav-link {{ Request::is('account*') ? '' : 'collapsed' }}" href="{{ url('/accounts') }}">
                     <i class="bi bi-people"></i>
                     <span>Akun</span>
                 </a>
