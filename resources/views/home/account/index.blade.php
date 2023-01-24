@@ -48,13 +48,6 @@
                     <td>
                       <div class="btn-group btn-group-sm gap-1" role="group"
                           aria-label="Basic example">
-                        <form action="{{ url('/account/'.$user->id.'/show') }}" method="GET">
-                          @csrf
-                          <button type="submit" class="btn btn-sm btn-success">
-                              <i class="bi bi-eye"></i>
-                          </button>
-                        </form>
-
                         <a href="/account/{{ $user->username }}/edit" class="btn btn-sm btn-warning" role="button">
                           <i class="bi bi-pencil"></i>
                         </a>
